@@ -40,9 +40,8 @@ def lambda_handler(event, context):
     # Make the changes to the database persistent
     conn.commit();
 
-    # Close communication with the database
+    # Close cursor
     cur.close()
-    conn.close()
 
     # Return to Amazon Cognito
     return event
